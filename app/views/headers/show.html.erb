@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @header.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @header.image %>
+</p>
+
+<p>
+  <strong>Partnum:</strong>
+  <%= @header.partnum %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @header.creator %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @header.manufacturer %>
+</p>
+
+<p>
+  <strong>Platform:</strong>
+  <%= @header.platform %>
+</p>
+
+<%= link_to 'Edit', edit_header_path(@header) %> |
+<%= link_to 'Back', headers_path %>
