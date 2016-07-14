@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Videocards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Memory</th>
+      <th>Memorytype</th>
+      <th>Memoryinterfacewidth</th>
+      <th>Memorybaseclock</th>
+      <th>Memoryboostclock</th>
+      <th>Memorybandwidth</th>
+      <th>Computingpower</th>
+      <th>Interface</th>
+      <th>Chipset</th>
+      <th>Sli</th>
+      <th>Slitype</th>
+      <th>Crossfire</th>
+      <th>Crossfiretype</th>
+      <th>Dviport</th>
+      <th>Hdmiport</th>
+      <th>Minihdmiport</th>
+      <th>Displayport</th>
+      <th>Minidisplayport</th>
+      <th>Expansionslotw</th>
+      <th>Tdp</th>
+      <th>Maxtemp</th>
+      <th>Powerconnectors</th>
+      <th>Framesync</th>
+      <th>Ventoinha</th>
+      <th>Maximumresolution</th>
+      <th>Multimonitor</th>
+      <th>Comprimento</th>
+      <th>Largura</th>
+      <th>Altura</th>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @videocards.each do |videocard| %>
+      <tr>
+        <td><%= videocard.memory %></td>
+        <td><%= videocard.memorytype %></td>
+        <td><%= videocard.memoryinterfacewidth %></td>
+        <td><%= videocard.memorybaseclock %></td>
+        <td><%= videocard.memoryboostclock %></td>
+        <td><%= videocard.memorybandwidth %></td>
+        <td><%= videocard.computingpower %></td>
+        <td><%= videocard.interface %></td>
+        <td><%= videocard.chipset %></td>
+        <td><%= videocard.sli %></td>
+        <td><%= videocard.slitype %></td>
+        <td><%= videocard.crossfire %></td>
+        <td><%= videocard.crossfiretype %></td>
+        <td><%= videocard.dviport %></td>
+        <td><%= videocard.hdmiport %></td>
+        <td><%= videocard.minihdmiport %></td>
+        <td><%= videocard.displayport %></td>
+        <td><%= videocard.minidisplayport %></td>
+        <td><%= videocard.expansionslotw %></td>
+        <td><%= videocard.tdp %></td>
+        <td><%= videocard.maxtemp %></td>
+        <td><%= videocard.powerconnectors %></td>
+        <td><%= videocard.framesync %></td>
+        <td><%= videocard.ventoinha %></td>
+        <td><%= videocard.maximumresolution %></td>
+        <td><%= videocard.multimonitor %></td>
+        <td><%= videocard.comprimento %></td>
+        <td><%= videocard.largura %></td>
+        <td><%= videocard.altura %></td>
+        <td><%= videocard.color %></td>
+        <td><%= link_to 'Show', videocard %></td>
+        <td><%= link_to 'Edit', edit_videocard_path(videocard) %></td>
+        <td><%= link_to 'Destroy', videocard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Videocard', new_videocard_path %>

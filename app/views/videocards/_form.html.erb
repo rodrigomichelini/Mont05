@@ -1,0 +1,167 @@
+<%= form_for(videocard) do |f| %>
+  <% if videocard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(videocard.errors.count, "error") %> prohibited this videocard from being saved:</h2>
+
+      <ul>
+      <% videocard.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :memory %>
+    <%= f.number_field :memory %>
+  </div>
+
+  <div class="field">
+    <%= f.label :memorytype %>
+    <%= f.text_field :memorytype %>
+  </div>
+
+  <div class="field">
+    <%= f.label :memoryinterfacewidth %>
+    <%= f.number_field :memoryinterfacewidth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :memorybaseclock %>
+    <%= f.number_field :memorybaseclock %>
+  </div>
+
+  <div class="field">
+    <%= f.label :memoryboostclock %>
+    <%= f.number_field :memoryboostclock %>
+  </div>
+
+  <div class="field">
+    <%= f.label :memorybandwidth %>
+    <%= f.number_field :memorybandwidth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :computingpower %>
+    <%= f.text_field :computingpower %>
+  </div>
+
+  <div class="field">
+    <%= f.label :interface %>
+    <%= f.text_field :interface %>
+  </div>
+
+  <div class="field">
+    <%= f.label :chipset %>
+    <%= f.text_field :chipset %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sli %>
+    <%= f.check_box :sli %>
+  </div>
+
+  <div class="field">
+    <%= f.label :slitype %>
+    <%= f.text_field :slitype %>
+  </div>
+
+  <div class="field">
+    <%= f.label :crossfire %>
+    <%= f.check_box :crossfire %>
+  </div>
+
+  <div class="field">
+    <%= f.label :crossfiretype %>
+    <%= f.text_field :crossfiretype %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dviport %>
+    <%= f.number_field :dviport %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hdmiport %>
+    <%= f.number_field :hdmiport %>
+  </div>
+
+  <div class="field">
+    <%= f.label :minihdmiport %>
+    <%= f.number_field :minihdmiport %>
+  </div>
+
+  <div class="field">
+    <%= f.label :displayport %>
+    <%= f.number_field :displayport %>
+  </div>
+
+  <div class="field">
+    <%= f.label :minidisplayport %>
+    <%= f.number_field :minidisplayport %>
+  </div>
+
+  <div class="field">
+    <%= f.label :expansionslotw %>
+    <%= f.number_field :expansionslotw %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tdp %>
+    <%= f.number_field :tdp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :maxtemp %>
+    <%= f.text_field :maxtemp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :powerconnectors %>
+    <%= f.text_field :powerconnectors %>
+  </div>
+
+  <div class="field">
+    <%= f.label :framesync %>
+    <%= f.text_field :framesync %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ventoinha %>
+    <%= f.check_box :ventoinha %>
+  </div>
+
+  <div class="field">
+    <%= f.label :maximumresolution %>
+    <%= f.text_field :maximumresolution %>
+  </div>
+
+  <div class="field">
+    <%= f.label :multimonitor %>
+    <%= f.check_box :multimonitor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comprimento %>
+    <%= f.number_field :comprimento %>
+  </div>
+
+  <div class="field">
+    <%= f.label :largura %>
+    <%= f.number_field :largura %>
+  </div>
+
+  <div class="field">
+    <%= f.label :altura %>
+    <%= f.number_field :altura %>
+  </div>
+
+  <div class="field">
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

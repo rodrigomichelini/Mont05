@@ -1,0 +1,65 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  memory: 1
+  memorytype: MyString
+  memoryinterfacewidth: 1
+  memorybaseclock: 1
+  memoryboostclock: 1
+  memorybandwidth: 1
+  computingpower: 1.5
+  interface: MyString
+  chipset: MyString
+  sli: false
+  slitype: MyString
+  crossfire: false
+  crossfiretype: MyString
+  dviport: 1
+  hdmiport: 1
+  minihdmiport: 1
+  displayport: 1
+  minidisplayport: 1
+  expansionslotw: 1
+  tdp: 1
+  maxtemp: 1.5
+  powerconnectors: MyString
+  framesync: MyString
+  ventoinha: false
+  maximumresolution: MyString
+  multimonitor: false
+  comprimento: 1
+  largura: 1
+  altura: 1
+  color: MyString
+
+two:
+  memory: 1
+  memorytype: MyString
+  memoryinterfacewidth: 1
+  memorybaseclock: 1
+  memoryboostclock: 1
+  memorybandwidth: 1
+  computingpower: 1.5
+  interface: MyString
+  chipset: MyString
+  sli: false
+  slitype: MyString
+  crossfire: false
+  crossfiretype: MyString
+  dviport: 1
+  hdmiport: 1
+  minihdmiport: 1
+  displayport: 1
+  minidisplayport: 1
+  expansionslotw: 1
+  tdp: 1
+  maxtemp: 1.5
+  powerconnectors: MyString
+  framesync: MyString
+  ventoinha: false
+  maximumresolution: MyString
+  multimonitor: false
+  comprimento: 1
+  largura: 1
+  altura: 1
+  color: MyString
