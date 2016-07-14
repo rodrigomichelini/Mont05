@@ -1,10 +1,10 @@
-<%= form_for(header) do |f| %>
-  <% if header.errors.any? %>
+<%= form_for(product) do |f| %>
+  <% if product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(header.errors.count, "error") %> prohibited this header from being saved:</h2>
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
       <ul>
-      <% header.errors.full_messages.each do |message| %>
+      <% product.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -24,11 +24,6 @@
   <div class="field">
     <%= f.label :partnum %>
     <%= f.text_field :partnum %>
-  </div>
-
-  <div class="field">
-    <%= f.label :creator %>
-    <%= f.text_field :creator %>
   </div>
 
   <div class="field">

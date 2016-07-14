@@ -4,7 +4,6 @@ one:
   name: MyString
   image: MyString
   partnum: MyString
-  creator: MyString
   manufacturer: MyString
   platform: MyString
 
@@ -12,6 +11,5 @@ two:
   name: MyString
   image: MyString
   partnum: MyString
-  creator: MyString
   manufacturer: MyString
   platform: MyString
