@@ -12,31 +12,31 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name, 'Nome do Produto' %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label :image, 'Link da Imagem' %>
     <%= f.text_field :image %>
   </div>
 
   <div class="field">
-    <%= f.label :partnum %>
+    <%= f.label :partnum, 'Número de Registro da Parte (Part Number)' %>
     <%= f.text_field :partnum %>
   </div>
 
   <div class="field">
-    <%= f.label :manufacturer %>
+    <%= f.label :manufacturer, 'Fabricante' %>
     <%= f.text_field :manufacturer %>
   </div>
 
   <div class="field">
-    <%= f.label :platform %>
+    <%= f.label :platform, 'Plataforma' %>
     <%= f.text_field :platform %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Adicionar Produto' %>
   </div>
 <% end %>

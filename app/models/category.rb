@@ -1,4 +1,3 @@
 class Category < ApplicationRecord
-  has_many :products, as: :productable
-  validates :name, presence: true
-end
+  #has_many :products, as: :productable
+  validates :name, presence: { message: "deverá ser especificado." }

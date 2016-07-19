@@ -10,47 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713210018) do
+ActiveRecord::Schema.define(version: 20160714003210) do
 
-  create_table "processors", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.string   "image"
-    t.float    "rating"
+    t.string   "type"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "productable_type"
+    t.integer  "productable_id"
+    t.string   "name"
+    t.string   "image"
     t.string   "partnum"
     t.string   "manufacturer"
     t.string   "platform"
-    t.string   "category"
-    t.integer  "cache"
-    t.integer  "instructionset"
-    t.string   "lithography"
-    t.string   "series"
-    t.string   "corefamily"
-    t.integer  "cores"
-    t.integer  "threads"
-    t.float    "basefrequency"
-    t.float    "maxfrequency"
-    t.integer  "tdp"
-    t.string   "socket"
-    t.boolean  "support64bit"
-    t.integer  "maxmemorysize"
-    t.string   "memorytypes"
-    t.integer  "memorychannels"
-    t.boolean  "eccsupport"
-    t.boolean  "hasintegratedgpu"
-    t.string   "integratedgpu"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.index ["productable_type", "productable_id"], name: "index_products_on_productable_type_and_productable_id"
   end
 
   create_table "videocards", force: :cascade do |t|
-    t.string   "name"
-    t.string   "image"
-    t.float    "rating"
-    t.string   "partnum"
-    t.string   "creator"
-    t.string   "manufacturer"
-    t.string   "platform"
-    t.string   "category"
+    t.integer  "product_id"
     t.integer  "memory"
     t.string   "memorytype"
     t.integer  "memoryinterfacewidth"
@@ -71,7 +56,7 @@ ActiveRecord::Schema.define(version: 20160713210018) do
     t.integer  "minidisplayport"
     t.integer  "expansionslotw"
     t.integer  "tdp"
-    t.float    "maxtemp"
+    t.integer  "maxtemp"
     t.string   "powerconnectors"
     t.string   "framesync"
     t.boolean  "ventoinha"
@@ -83,6 +68,7 @@ ActiveRecord::Schema.define(version: 20160713210018) do
     t.string   "color"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.index ["product_id"], name: "index_videocards_on_product_id"
   end
 
 end
