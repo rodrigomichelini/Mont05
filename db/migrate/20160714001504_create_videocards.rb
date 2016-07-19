@@ -2,6 +2,8 @@ class CreateVideocards < ActiveRecord::Migration[5.0]
   def change
     create_table :videocards do |t|
 
+      t.references :product, index: true
+
       t.integer :memory #quantidade de RAM de video dedicada
       t.string :memorytype #tipo de RAM de video dedicada. ex: gddr5
       t.integer :memoryinterfacewidth #ex: 512 bit, 256 bit, etc
@@ -40,6 +42,7 @@ class CreateVideocards < ActiveRecord::Migration[5.0]
       t.string :color #cor da memória ou seu dissipador. Cor que predomina.
 
       t.timestamps
+
     end
   end
 end
