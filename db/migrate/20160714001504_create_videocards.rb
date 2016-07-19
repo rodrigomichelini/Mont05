@@ -34,7 +34,7 @@ class CreateVideocards < ActiveRecord::Migration[5.0]
       t.string :maximumresolution #resolução digital máxima ex: 7680x4320@60Hz
       t.boolean :multimonitor #mais de um monitor?
 
-        #dimensões
+      #dimensões
       t.integer :comprimento #comprimento, em milímetros (mm), da placa
       t.integer :largura #largura, em milímetros (mm), da placa
       t.integer :altura #altura máxima, em milímetros (mm), da placa (contando o cooler, se tiver)
